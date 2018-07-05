@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": "true",
+    ".write": "auth != null",
+    "categories": {
+     ".read": "true"
+    },
+    "products":{
+      ".read": "true"
+    },
+    "shopping-carts": {
+       ".read": "true",
+       ".write": "true"
+     },
+    "users": {
+      ".read": "true",
+      ".write": "true"
+    },
+    "orders": {
+      ".read": "true",
+      ".write": "true"
+    }
+  }
+}

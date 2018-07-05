@@ -6,6 +6,7 @@ import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 @NgModule({
   imports: [
     SharedModule,
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
   declarations: [
     BsNavbarComponent,
     HomeComponent,
-    LoginComponent,        
+    LoginComponent,
   ],
   exports: [
     BsNavbarComponent

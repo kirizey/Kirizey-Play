@@ -1,11 +1,22 @@
+.shopping-cart {
+  /* opacity: 0.5; */
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 80px;
+  padding: 70px 32px 0px 40px;
+}
 
-.thumbnail { 
+.thumbnail {
   width: 80px;
   height: 80px;
   border-radius: 100%;
   background-size: cover;
 }
 
-.card { 
+.card {
   margin-bottom: 80px;
+  background: none;
+  color: #fff;
+}
+h1 {
+  color: #fff;
 }

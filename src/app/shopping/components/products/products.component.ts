@@ -13,7 +13,7 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit  {
-  products: Product[] = [];
+  products: any = [];
   filteredProducts: Product[] = [];
   category: string;
   cart$: Observable<ShoppingCart>;

@@ -1,0 +1,9 @@
+.product-form {
+  margin-top: 80px;
+  padding: 70px 32px 40px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  
+}
+.product-form label{
+    color: #fff;
+}

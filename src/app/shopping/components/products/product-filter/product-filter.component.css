@@ -1,4 +1,39 @@
-
-.sticky-top { 
+.sticky-top {
   top: 80px;
+}
+.sidebar-list-item {
+  display: block;
+  position: relative;
+  float: none;
+  padding: 0;
+
+  overflow: hidden;
+  text-shadow: none;
+  white-space: nowrap;
+}
+a.sidebar-list-item.active {
+  color: #209e91 !important;
+}
+a.sidebar-list-item {
+  display: block;
+  height: 42px;
+  padding-left: 18px;
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 42px;
+  cursor: pointer;
+  color: #fff;
+}
+a.sidebar-list-subitem {
+  display: block;
+  text-shadow: none;
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 52px;
+  height: auto;
+  line-height: 29px;
+}
+a.sidebar-list-subitem:hover {
+  color: #209e91 !important;
 }
