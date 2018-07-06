@@ -1,24 +1,36 @@
-import { UserService } from './shared/services/user.service';
-import { Router } from '@angular/router';
-import { AuthService } from './shared/services/auth.service';
-import { Component } from '@angular/core';
+import { UserService } from "./shared/services/user.service";
+import { Router } from "@angular/router";
+import { AuthService } from "./shared/services/auth.service";
+import { Component } from "@angular/core";
+import { ProductFilterComponent } from "./shopping/components/products/product-filter/product-filter.component";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  constructor(private userService: UserService, private auth: AuthService, router: Router) {
+  categories$;
+  showSpinner: boolean = true;
+
+  constructor(
+    private userService: UserService,
+    private auth: AuthService,
+    router: Router,
+    private cats: ProductFilterComponent
+  ) {
+    this.categories$ = cats.categories$;
+    this.categories$.subscribe(() => (this.showSpinner = false));
+
     auth.user$.subscribe(user => {
-      if (!user) return; 
+      if (!user) return;
 
       userService.save(user);
 
-      let returnUrl = localStorage.getItem('returnUrl');
-      if (!returnUrl) return; 
+      let returnUrl = localStorage.getItem("returnUrl");
+      if (!returnUrl) return;
 
-      localStorage.removeItem('returnUrl');
+      localStorage.removeItem("returnUrl");
       router.navigateByUrl(returnUrl);
     });
   }

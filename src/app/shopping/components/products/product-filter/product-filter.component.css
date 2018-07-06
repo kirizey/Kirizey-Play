@@ -6,12 +6,12 @@
   position: relative;
   float: none;
   padding: 0;
-
+  background: rgba(0, 0, 0, 0) !important;
   overflow: hidden;
   text-shadow: none;
   white-space: nowrap;
 }
-a.sidebar-list-item.active {
+a.sidebar-list-subitem.active {
   color: #209e91 !important;
 }
 a.sidebar-list-item {
@@ -36,4 +36,11 @@ a.sidebar-list-subitem {
 }
 a.sidebar-list-subitem:hover {
   color: #209e91 !important;
+}
+
+.fa-chevron-down {
+  float: right;
+  top: 5px !important;
+  margin-top: 13px;
+  margin-right: 10px;
 }

@@ -1,18 +1,33 @@
 <div class="sticky-top">
   <div>
-      <a
-        class="sidebar-list-item"
-        [class.active]="!category"
-        routerLink="/"
-        >All Categories</a>
-      <a 
-        class="sidebar-list-subitem"
-        *ngFor="let c of categories$ | async" 
-        routerLink="/"
-        [queryParams]="{ category: c.$key }"
-        [class.active]="category === c.$key"
-        >
-        {{ c.name }}
-      </a>
+    <a class="sidebar-list-item ml-auto" data-toggle="collapse" aria-expanded="true" data-target="#collapsingNavbar2"
+    >
+      <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Categories
+      <i class="fa fa-chevron-down"></i>
+    </a>
+
+    <div class="navbar-collapse collapse show" id="collapsingNavbar2">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item active">
+            <a class="sidebar-list-subitem"
+            [class.active]="!category" 
+            routerLink="/"
+        >All categories</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="sidebar-list-subitem" 
+            *ngFor="let c of categories$ | async" 
+            routerLink="/" 
+            [queryParams]="{ category: c.$key }"
+            [class.active]="category === c.$key">
+            {{ c.name }}
+          </a>
+        </li>
+
+      </ul>
+
     </div>
+  </div>
 </div>

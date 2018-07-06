@@ -1,6 +1,6 @@
 .card {
   margin-bottom: 30px;
-  width: 14rem;
+  width: 15rem;
   margin: 10px;
   border: none !important;
   color: #fff;
@@ -10,7 +10,7 @@
   background-color: aqua !important;
 } */
 .card-img-top {
-  height: 210px;
+  height: 250px;
 }
 
 .card-footer {

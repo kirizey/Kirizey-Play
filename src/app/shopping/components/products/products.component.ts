@@ -1,18 +1,20 @@
-import { ShoppingCart } from '../../../shared/models/shopping-cart';
-import { Observable } from 'rxjs/Observable';
-import { ShoppingCartService } from '../../../shared/services/shopping-cart.service';
-import { Product } from '../../../shared/models/product';
-import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../shared/services/product.service';
-import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/switchMap';
+import { ShoppingCart } from "../../../shared/models/shopping-cart";
+import { Observable } from "rxjs/Observable";
+import { ShoppingCartService } from "../../../shared/services/shopping-cart.service";
+import { Product } from "../../../shared/models/product";
+import { ActivatedRoute } from "@angular/router";
+import { ProductService } from "../../../shared/services/product.service";
+import { Component, OnInit } from "@angular/core";
+import "rxjs/add/operator/switchMap";
+import { fade } from "../../../animations/animations";
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: "app-products",
+  templateUrl: "./products.component.html",
+  styleUrls: ["./products.component.css"],
+  animations: [fade]
 })
-export class ProductsComponent implements OnInit  {
+export class ProductsComponent implements OnInit {
   products: any = [];
   filteredProducts: Product[] = [];
   category: string;
@@ -22,15 +24,14 @@ export class ProductsComponent implements OnInit  {
     private route: ActivatedRoute,
     private productService: ProductService,
     private shoppingCartService: ShoppingCartService
-  ) {
-  }
+  ) {}
 
   async ngOnInit() {
     this.cart$ = await this.shoppingCartService.getCart();
     this.populateProducts();
   }
 
-  private populateProducts() { 
+  private populateProducts() {
     this.productService
       .getAll()
       .switchMap(products => {
@@ -38,15 +39,14 @@ export class ProductsComponent implements OnInit  {
         return this.route.queryParamMap;
       })
       .subscribe(params => {
-        this.category = params.get('category');
-        this.applyFilter();      
+        this.category = params.get("category");
+        this.applyFilter();
       });
   }
 
-
-  private applyFilter() { 
-    this.filteredProducts = (this.category) ? 
-    this.products.filter(p => p.category === this.category) : 
-    this.products;
+  private applyFilter() {
+    this.filteredProducts = this.category
+      ? this.products.filter(p => p.category === this.category)
+      : this.products;
   }
 }
