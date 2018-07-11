@@ -7,6 +7,7 @@ import { ProductService } from "../../../shared/services/product.service";
 import { Component, OnInit } from "@angular/core";
 import "rxjs/add/operator/switchMap";
 import { fade } from "../../../animations/animations";
+import { SidebarService } from "shared/services/sidebar.service";
 
 @Component({
   selector: "app-products",
@@ -19,16 +20,21 @@ export class ProductsComponent implements OnInit {
   filteredProducts: Product[] = [];
   category: string;
   cart$: Observable<ShoppingCart>;
+  sidebarActive: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private shoppingCartService: ShoppingCartService
+    private shoppingCartService: ShoppingCartService,
+    private sidebarService: SidebarService
   ) {}
 
   async ngOnInit() {
     this.cart$ = await this.shoppingCartService.getCart();
     this.populateProducts();
+    this.sidebarService.change.subscribe(active => {
+      this.sidebarActive = active;
+    });
   }
 
   private populateProducts() {
@@ -48,5 +54,9 @@ export class ProductsComponent implements OnInit {
     this.filteredProducts = this.category
       ? this.products.filter(p => p.category === this.category)
       : this.products;
+  }
+
+  openSidebar() {
+    this.sidebarActive = !this.sidebarActive;
   }
 }

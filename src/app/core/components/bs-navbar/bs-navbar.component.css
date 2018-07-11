@@ -8,12 +8,12 @@
   position: fixed;
   z-index: 904;
   box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
-  height: 66px;
+  min-height: 66px;
   width: 100%;
   min-width: 320px;
   padding: 0 32px 0 40px;
 }
-.dropdown{
+.dropdown {
   cursor: pointer;
 }
 .username {
@@ -29,7 +29,7 @@
 .badge-warning {
   color: #fff;
   background-color: #e85656;
-  animation: pulse 5s ease-out infinite;
+  animation: pulse 3s ease-out infinite;
 }
 .badge-pill {
   padding-right: 0.5em;
@@ -42,11 +42,13 @@
   margin-right: 10px;
 }
 .navbar-brand {
-  font: normal 30px/normal "Kaushan Script", Helvetica, sans-serif !important;
+  font: normal 30px / normal "Kaushan Script", Helvetica, sans-serif !important;
   font-weight: bold;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   text-align: center;
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #209e91 , 0 0 70px #209e91 , 0 0 80px #209e91 , 0 0 100px #209e91 ;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1), 0 0 40px #209e91, 0 0 70px #209e91,
+    0 0 80px #209e91, 0 0 100px #209e91;
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -58,12 +60,14 @@
   margin-left: 60px;
 }
 .kirizey {
-  color: #00A391;
+  color: #00a391;
 }
 .dropdown-item {
   cursor: pointer;
 }
-
+.menu-icon {
+  cursor: pointer;
+}
 @-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 #e85656;
@@ -100,27 +104,39 @@
 
 @-webkit-keyframes neon6 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #209e91, 0 0 70px #209e91, 0 0 80px #209e91, 0 0 100px #209e91, 0 0 150px #209e91;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #209e91,
+      0 0 70px #209e91, 0 0 80px #209e91, 0 0 100px #209e91, 0 0 150px #209e91;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91, 0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91,
+      0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
   }
 }
 
 @-moz-keyframes neon6 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #209e91, 0 0 70px #209e91, 0 0 80px #209e91, 0 0 100px #209e91, 0 0 150px #209e91;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #209e91,
+      0 0 70px #209e91, 0 0 80px #209e91, 0 0 100px #209e91, 0 0 150px #209e91;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91, 0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91,
+      0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
   }
 }
 
 @keyframes neon6 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #209e91, 0 0 70px #209e91, 0 0 80px #209e91, 0 0 100px #209e91, 0 0 150px #209e91;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #209e91,
+      0 0 70px #209e91, 0 0 80px #209e91, 0 0 100px #209e91, 0 0 150px #209e91;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91, 0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91,
+      0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-brand {
+    margin-left: 14px !important;
   }
 }

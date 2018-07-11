@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="products-front">
   <div class="row">
-    <div class="col-2">
+    <div *ngIf="sidebarActive" class="col-2">
       <app-sidebar></app-sidebar>
     </div>
     <div class="col">
-      <div  class="card-group products-list" *ngIf="cart$ | async as cart">
-        <ng-container  *ngFor="let p of filteredProducts; let i = index">
+      <div class="card-group products-list" *ngIf="cart$ | async as cart">
+        <ng-container *ngFor="let p of filteredProducts; let i = index">
           <product-card @fade [product]="p" [shopping-cart]="cart"></product-card>
           <!-- <div *ngIf="(i + 1) % 4 === 0"></div> -->
         </ng-container>

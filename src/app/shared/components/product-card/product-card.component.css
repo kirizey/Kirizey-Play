@@ -1,14 +1,12 @@
 .card {
   margin-bottom: 30px;
-  width: 15rem;
+  /* width: 15rem; */
   margin: 10px;
   border: none !important;
   color: #fff;
   background: rgba(0, 0, 0, 0.082);
 }
-/* .card:hover{
-  background-color: aqua !important;
-} */
+
 .card-img-top {
   height: 250px;
 }
@@ -16,7 +14,6 @@
 .card-footer {
   padding: 0;
   background: #fff;
-  /* margin-bottom: 30px !important; */
 }
 
 .card-footer button {

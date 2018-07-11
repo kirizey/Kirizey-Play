@@ -20,7 +20,14 @@ export class AppComponent {
     private cats: ProductFilterComponent
   ) {
     this.categories$ = cats.categories$;
-    this.categories$.subscribe(() => (this.showSpinner = false));
+    // this.categories$.subscribe(() => {
+    //   this.showSpinner = false;
+    // });
+    this.categories$.subscribe(() => {
+      setTimeout(() => {
+        this.showSpinner = false;
+      }, 3000);
+    });
 
     auth.user$.subscribe(user => {
       if (!user) return;

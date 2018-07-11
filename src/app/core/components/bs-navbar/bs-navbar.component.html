@@ -1,18 +1,28 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
   <div class="container-fluid">
+    <ul class="navbar-nav" style="color: white">
+      <div class="menu-icon">
+        <a (click)="openSidebar()">
+          <div class="fa fa-bars" aria-hidden="true"></div>
+        </a>
+      </div>
+    </ul>
+
     <a class="navbar-brand" routerLink="/">
-      <span class="kirizey">Kirizey</span><span class="play">Play</span>
+      <span class="kirizey">Kirizey</span>
+      <span class="play">Play</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-       
+
       </ul>
-      <ul  class="navbar-nav right">
-        <li  class="nav-item">
+      <ul class="navbar-nav right">
+        <li class="nav-item">
           <a class="nav-link" routerLink="/shopping-cart">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             <span class="badge badge-warning badge-pill" *ngIf="cart$ | async as cart">
@@ -27,11 +37,12 @@
             <a class="nav-link" routerLink="/login">Login</a>
           </li>
         </ng-template>
-        <li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown" class="nav-link" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown" class="nav-link" id="dropdown01" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
           <a ngbDropdownToggle class="nav-link dropdown-toggle username">
             {{ appUser.name }}
           </a>
-          <a class="nav-link email" >
+          <a class="nav-link email">
             {{appUser.email}}
           </a>
           <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
@@ -44,7 +55,7 @@
           </div>
         </li>
       </ul>
-    
+
     </div>
   </div>
 </nav>

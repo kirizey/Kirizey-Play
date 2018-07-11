@@ -3,7 +3,9 @@ import { Observable } from "rxjs/Observable";
 import { ShoppingCartService } from "../../../shared/services/shopping-cart.service";
 import { AppUser } from "../../../shared/models/app-user";
 import { AuthService } from "../../../shared/services/auth.service";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
+import { ProductsComponent } from "../../../shopping/components/products/products.component";
+import { SidebarService } from "shared/services/sidebar.service";
 
 @Component({
   selector: "bs-navbar",
@@ -16,8 +18,11 @@ export class BsNavbarComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private shoppingCartService: ShoppingCartService
-  ) {}
+    private shoppingCartService: ShoppingCartService,
+    private productsComponent: ProductsComponent,
+    private sidebarService: SidebarService
+  ) {
+  }
 
   async ngOnInit() {
     this.auth.appUser$.subscribe(appUser => (this.appUser = appUser));
@@ -26,5 +31,10 @@ export class BsNavbarComponent implements OnInit {
 
   logout() {
     this.auth.logout();
+  }
+
+  @HostListener('openSidebar')
+  openSidebar() {
+    this.sidebarService.toggle();
   }
 }
