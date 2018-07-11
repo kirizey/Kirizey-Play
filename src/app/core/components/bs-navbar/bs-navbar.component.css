@@ -37,7 +37,23 @@
   padding-top: 0.4em;
   border-radius: 11rem;
 }
-
+.searchbar {
+  background: 0 0;
+  border: none;
+  outline: 0;
+  width: 226px;
+  padding: 0;
+  margin: 0 0 0 -3px;
+  height: 60px;
+  cursor: pointer;
+  margin-left: 32px;
+  display: flex;
+  color: white;
+}
+.fa-search {
+  color: white;
+  margin-top: 22px;
+}
 .right {
   margin-right: 10px;
 }
@@ -132,6 +148,12 @@
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #209e91,
       0 0 35px #209e91, 0 0 40px #209e91, 0 0 50px #209e91, 0 0 75px #209e91;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchbar {
+    margin-left: 0;
   }
 }
 

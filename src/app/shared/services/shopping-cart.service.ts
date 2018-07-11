@@ -60,6 +60,7 @@ export class ShoppingCartService {
         title: product.title,
         imageUrl: product.imageUrl,
         price: product.price,
+        description: product.description,
         quantity: quantity
       });
     });

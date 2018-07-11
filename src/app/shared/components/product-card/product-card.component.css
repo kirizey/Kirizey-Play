@@ -5,12 +5,20 @@
   border: none !important;
   color: #fff;
   background: rgba(0, 0, 0, 0.082);
+  /* perspective: 1000px; */
 }
 
 .card-img-top {
   height: 250px;
 }
-
+.back-side {
+  position: absolute;
+  transform: rotateY(180deg);
+}
+.description {
+  margin-top: 50%;
+  text-align: center;
+}
 .card-footer {
   padding: 0;
   background: #fff;
@@ -22,4 +30,19 @@
 .card-title {
   height: 100px;
   font-size: 1.2rem;
+}
+.front-side,
+.back-side {
+  backface-visibility: hidden;
+  transition: 0.5s;
+}
+.card:hover .front-side {
+  transform: rotateY(180deg);
+}
+.card:hover .back-side {
+  transform: rotateY(360deg);
+}
+.genre {
+  text-transform: capitalize;
+  opacity: 0.9;
 }
