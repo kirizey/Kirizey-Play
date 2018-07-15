@@ -16,7 +16,7 @@
   transform: rotateY(180deg);
 }
 .description {
-  margin-top: 50%;
+  margin-top: 15%;
   text-align: center;
 }
 .card-footer {
@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 .card-title {
-  height: 100px;
+  height: 60px;
   font-size: 1.2rem;
 }
 .front-side,
@@ -44,5 +44,5 @@
 }
 .genre {
   text-transform: capitalize;
-  opacity: 0.9;
+  opacity: 0.6;
 }
