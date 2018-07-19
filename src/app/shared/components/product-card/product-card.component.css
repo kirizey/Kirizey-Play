@@ -13,7 +13,8 @@
 }
 .back-side {
   position: absolute;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .description {
   margin-top: 15%;
@@ -33,14 +34,18 @@
 }
 .front-side,
 .back-side {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .card:hover .front-side {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .card:hover .back-side {
-  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 .genre {
   text-transform: capitalize;
