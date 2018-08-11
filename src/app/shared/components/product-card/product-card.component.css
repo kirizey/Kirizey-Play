@@ -6,6 +6,9 @@
   color: #fff;
   background: rgba(0, 0, 0, 0.082);
   /* perspective: 1000px; */
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .card-img-top {
@@ -14,7 +17,7 @@
 .back-side {
   position: absolute;
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .description {
   margin-top: 15%;
@@ -35,17 +38,17 @@
 .front-side,
 .back-side {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .card:hover .front-side {
   -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .card:hover .back-side {
   -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 .genre {
   text-transform: capitalize;

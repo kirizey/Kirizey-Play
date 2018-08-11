@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 904;
   -webkit-box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
   min-height: 66px;
   width: 100%;
   min-width: 320px;
@@ -31,13 +31,15 @@
   color: #fff;
   background-color: #e85656;
   -webkit-animation: pulse 3s ease-out infinite;
-          animation: pulse 3s ease-out infinite;
+  animation: pulse 3s ease-out infinite;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .badge-pill {
   padding-right: 0.5em;
   padding-left: 0.5em;
   padding-top: 0.4em;
-  border-radius: 11rem;
+  border-radius: 50%;
 }
 .searchbar {
   background: 0 0;
@@ -102,20 +104,20 @@
 @keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 #e85656;
-            box-shadow: 0 0 0 0 #e85656;
+    box-shadow: 0 0 0 0 #e85656;
   }
 
   20% {
     -webkit-box-shadow: 0 0 0 15px rgba(204, 169, 44, 0);
-            box-shadow: 0 0 0 15px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 15px rgba(204, 169, 44, 0);
   }
   50% {
     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-            box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
   100% {
     -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-            box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
 

@@ -26,7 +26,7 @@ export class AppComponent {
     this.categories$.subscribe(() => {
       setTimeout(() => {
         this.showSpinner = false;
-      }, 3000);
+      }, 500);
     });
 
     auth.user$.subscribe(user => {

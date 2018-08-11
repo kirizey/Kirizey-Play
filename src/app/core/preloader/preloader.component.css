@@ -5,7 +5,7 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   font: normal 100px / normal "Kaushan Script", Helvetica, sans-serif !important;
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
@@ -20,7 +20,7 @@
   -webkit-animation: neon1 1s ease-in-out infinite alternate;
   animation: neon1 1s ease-in-out infinite alternate;
   -webkit-animation: lower 11s linear infinite;
-          animation: lower 11s linear infinite;
+  animation: lower 11s linear infinite;
 }
 .preloader {
   position: fixed;
@@ -31,6 +31,8 @@
   background-image: url("../../../assets/bg2.jpg");
   background-size: cover;
   z-index: 9999;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @media (max-width: 550px) {
