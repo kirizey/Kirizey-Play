@@ -49,7 +49,7 @@
 
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ba01ff,
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #229e92,
       0 0 70px #229e92, 0 0 80px #229e92, 0 0 100px #229e92, 0 0 150px #229e92;
   }
   to {

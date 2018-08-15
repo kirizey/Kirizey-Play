@@ -1,13 +1,4 @@
-import {
-  animate,
-  transition,
-  trigger,
-  state,
-  style,
-  keyframes,
-  animation,
-  useAnimation
-} from "@angular/animations";
+import { animate, transition, trigger, style } from "@angular/animations";
 
 export var fade = trigger("fade", [
   transition("void => *", [

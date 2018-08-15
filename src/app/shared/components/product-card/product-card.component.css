@@ -8,7 +8,7 @@
   /* perspective: 1000px; */
   cursor: pointer;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .card-img-top {

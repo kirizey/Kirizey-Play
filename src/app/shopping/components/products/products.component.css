@@ -9,12 +9,3 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
-/* .products-front{
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  grid-gap: 10px;
-} */
-/* */
-@media (max-width: 768px) {
-  
-} 
