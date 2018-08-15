@@ -3,10 +3,14 @@
   margin: 10px;
   border: none !important;
   color: #fff;
-  background: rgba(0, 0, 0, 0.082);
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
+  background: rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .card-img-top {
@@ -14,9 +18,11 @@
 }
 .back-side {
   position: absolute;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
 }
+
 .description {
   margin-top: 15%;
   text-align: center;
@@ -37,16 +43,27 @@
 .back-side {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.front-side {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.card:hover {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+    -5px -5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3), -5px -5px 5px rgba(0, 0, 0, 0.3);
 }
 .card:hover .front-side {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
 }
 .card:hover .back-side {
-  -webkit-transform: rotateY(360deg);
-  transform: rotateY(360deg);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 .genre {
   text-transform: capitalize;
