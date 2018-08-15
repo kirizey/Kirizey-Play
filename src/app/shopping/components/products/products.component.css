@@ -9,3 +9,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
+
+@media (max-width: 768px) {
+  product-card {
+    animation: none;
+  }
+}

@@ -39,6 +39,18 @@
   .preloader-logo {
     font-size: 80px !important;
   }
+  .preloader-logo span {
+    -webkit-animation: none;
+    animation: none;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #229e92,
+      0 0 35px #229e92, 0 0 40px #229e92, 0 0 50px #229e92, 0 0 75px #229e92;
+  }
+  .preloader-logo {
+    -webkit-animation: none;
+    animation: none;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #229e92,
+      0 0 35px #229e92, 0 0 40px #229e92, 0 0 50px #229e92, 0 0 75px #229e92;
+  }
 }
 
 @media (max-width: 375px) {

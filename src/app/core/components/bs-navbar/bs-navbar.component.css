@@ -74,7 +74,7 @@
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
   animation: neon6 1.5s ease-in-out infinite alternate;
   margin-left: 60px;
@@ -147,6 +147,13 @@
 @media (max-width: 768px) {
   .searchbar {
     margin-left: 0;
+  }
+  .navbar-brand {
+    -webkit-animation: none;
+    animation: none;
+  }
+  .badge-warning {
+    animation: none;
   }
 }
 
