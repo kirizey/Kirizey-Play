@@ -2,15 +2,13 @@
   top: 85px;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: width 0.5s ease;
-  transition: width 0.5s ease;
-  /* padding-top: 20px; */
   padding-bottom: 20px;
   overflow: hidden;
   color: #fff;
-  /* width: 250px; */
   width: 200px;
   height: 100vh;
+  -webkit-animation: 0.4s sidebarAnimation ease-out;
+  animation: 0.4s sidebarAnimation ease-out;
 }
 .sidebar-list-item {
   display: block;
@@ -22,9 +20,6 @@
   text-shadow: none;
   white-space: nowrap;
 }
-/* a.sidebar-list-item.active {
-  background-color: #209e91 !important;
-} */
 a.sidebar-list-item {
   display: block;
   height: 42px;
@@ -44,11 +39,7 @@ i {
   float: left;
   display: contents;
 }
-/* @media (max-width: 990px) {
-  .sidebar {
-    width: 150%;
-  }
-}*/
+
 @media (max-width: 1024px) {
   .sidebar {
     z-index: 900;
@@ -69,5 +60,27 @@ i {
 @media (min-width: 1900px) {
   .sidebar {
     width: 315px;
+  }
+}
+
+@-webkit-keyframes sidebarAnimation {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes sidebarAnimation {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
