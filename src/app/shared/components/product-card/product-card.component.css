@@ -1,14 +1,12 @@
 .card {
   margin-bottom: 30px;
-  /* width: 15rem; */
   margin: 10px;
   border: none !important;
   color: #fff;
   background: rgba(0, 0, 0, 0.082);
-  /* perspective: 1000px; */
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
   cursor: pointer;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 .card-img-top {
