@@ -13,6 +13,7 @@
   width: 100%;
   min-width: 320px;
   padding: 0 32px 0 40px;
+  min-height: 85px;
 }
 .dropdown {
   cursor: pointer;
