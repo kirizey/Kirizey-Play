@@ -10,6 +10,7 @@
   -webkit-animation: 0.4s sidebarAnimation ease-out;
   animation: 0.4s sidebarAnimation ease-out;
 }
+
 .sidebar-list-item {
   display: block;
   position: relative;
@@ -20,6 +21,7 @@
   text-shadow: none;
   white-space: nowrap;
 }
+
 a.sidebar-list-item {
   display: block;
   height: 42px;
@@ -46,17 +48,20 @@ i {
     width: 180px;
   }
 }
+
 @media (max-width: 980px) {
   .sidebar {
     width: 160px;
   }
 }
+
 @media (max-width: 812px) {
   .sidebar {
     width: 140px;
     top: 66px;
   }
 }
+
 @media (min-width: 1900px) {
   .sidebar {
     width: 315px;
@@ -68,6 +73,7 @@ i {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
+
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -79,6 +85,7 @@ i {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
+
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0);

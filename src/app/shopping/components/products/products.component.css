@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 768px) {
-  product-card {
+  .product-card {
     animation: none;
   }
 }

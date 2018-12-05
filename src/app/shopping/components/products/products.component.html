@@ -7,7 +7,6 @@
       <div class="card-group products-list" *ngIf="cart$ | async as cart">
         <ng-container *ngFor="let p of filteredProducts; let i = index">
           <product-card @fade [product]="p" [shopping-cart]="cart"></product-card>
-          <!-- <div *ngIf="(i + 1) % 4 === 0"></div> -->
         </ng-container>
       </div>
     </div>
